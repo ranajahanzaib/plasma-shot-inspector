@@ -1,0 +1,52 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "plasma-shot-inspector"
+version = "0.1.0"
+description = "Transparent quality auditing for FAIR-MAST tokamak data"
+readme = "README.md"
+requires-python = ">=3.11"
+license = "MIT"
+dependencies = [
+  "fastapi",
+  "uvicorn[standard]",
+  "pydantic",
+  "numpy",
+  "scipy",
+  "polars",
+  "pyarrow",
+  "xarray",
+  "zarr",
+  "fsspec",
+  "s3fs",
+  "duckdb",
+  "typer",
+  "rich",
+  "contourpy",
+  "shapely",
+  "dask>=2026.11.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest", "ruff", "pyright", "httpx"]
+
+[project.scripts]
+plasma-inspector = "plasma_inspector.cli:app"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/plasma_inspector"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.pyright]
+pythonVersion = "3.11"
+typeCheckingMode = "basic"
+include = ["src"]
