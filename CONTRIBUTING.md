@@ -1,46 +1,41 @@
-## Contributing
+# Contributing
 
-We welcome contributions of all kinds to improve this project! Here's how you can get involved:
+Contributions that improve the scientific checks, data provenance, documentation, or usability are welcome. For a substantial change, open an issue first so the approach can be discussed.
 
-1. **Fork the Repository**: Start by forking the repository to your GitHub account.
+## Set up the project
 
-2. **Clone Your Fork**: Clone the forked repository to your local machine:
+```bash
+git clone https://github.com/ranajahanzaib/plasma-shot-inspector.git
+cd plasma-shot-inspector
+make setup
+```
 
-   ```bash
-   git clone <repo_url>
-   cd repo_dir
-   ```
+Create a topic branch for your change:
 
-3. **Create a Branch**: Create a new branch for your feature or bug fix:
+```bash
+git switch -c describe-your-change
+```
 
-   ```bash
-   git checkout -b feature-name
-   ```
+## Make and verify a change
 
-4. **Make Changes**: Make your changes to the codebase. Be sure to follow existing code style and conventions.
+- Follow the existing Python and TypeScript conventions.
+- Add or update deterministic tests for changed scientific rules and edge cases.
+- Preserve source values and ordering. Do not silently repair, interpolate, or impute measurements.
+- Keep data-source assumptions and provenance visible in findings and documentation.
+- Do not commit credentials, local environment files, downloaded datasets, local databases, or generated audit reports.
+- Update the README when user-facing behavior, supported data, setup, or limitations change.
 
-5. **Commit Changes**: Commit your changes with a clear and descriptive message:
+Run the relevant checks before opening a pull request:
 
-   ```bash
-   git commit -m "Add detailed description of the changes"
-   ```
+```bash
+make test
+make lint
+make typecheck
+make build
+```
 
-6. **Push Changes**: Push your changes to your fork:
+## Submit a contribution
 
-   ```bash
-   git push origin feature-name
-   ```
+Push your branch to your fork and open a pull request against this repository. Describe the user or scientific problem, summarize the change, and include the checks you ran. For scientific changes, explain the assumptions and provide test cases that make the expected behavior reproducible.
 
-7. **Submit a Pull Request**: Open a pull request from your branch to the main repository's branch. Include a detailed description of your changes and the problem they solve.
-
-8. **Review and Feedback**: Participate in the review process. Make any requested changes, and your contribution will be merged!
-
-### Guidelines
-
-- Ensure your code follows the existing style and conventions.
-- Include tests for any new functionality or bug fixes.
-- Write clear, concise commit messages and pull request descriptions.
-
-### Issues
-
-Feel free to report bugs or suggest enhancements by creating an issue. Be sure to include detailed information about the problem and, if possible, steps to reproduce it.
+Please follow the [Code of Conduct](CODE_OF_CONDUCT.md). Bug reports and feature requests can be filed through the repository's GitHub issue templates.

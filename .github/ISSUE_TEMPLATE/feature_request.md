@@ -1,19 +1,19 @@
 ---
 name: Feature request
-about: Suggest an idea for this project
-title: ''
+about: Suggest an improvement to the inspector
+title: ""
 labels: enhancement
-assignees: ''
+assignees: ""
 ---
 
-**Is your feature request related to a problem? Please describe.**
-A clear and concise description of what the problem is. Ex. I'm always frustrated when [...]
+**What problem would this solve?**
+Describe the research or workflow need.
 
-**Describe the solution you'd like**
-A clear and concise description of what you want to happen.
+**What would you like to happen?**
+Describe the proposed behavior, including relevant data sources or scientific assumptions.
 
-**Describe alternatives you've considered**
-A clear and concise description of any alternative solutions or features you've considered.
+**Alternatives considered**
+Describe any alternatives that might address the same need.
 
 **Additional context**
-Add any other context or screenshots about the feature request here.
+Include examples or references that help explain the request.

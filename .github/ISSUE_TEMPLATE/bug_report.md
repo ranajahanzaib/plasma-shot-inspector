@@ -1,26 +1,24 @@
 ---
 name: Bug report
-about: Create a report to help us improve
-title: ''
+about: Report a reproducible problem with the inspector
+title: ""
 labels: bug
-assignees: ''
+assignees: ""
 ---
 
-**Describe the bug**
-A clear and concise description of what the bug is.
+**What happened?**
+Describe the unexpected behavior and what you expected to happen.
 
-**To Reproduce**
-Steps to reproduce the behavior:
-1. Go to '...'
-2. Click on '....'
-3. See error
+**Steps to reproduce**
 
-**Expected behavior**
-A clear and concise description of what you expected to happen.
+1. Describe the command, page, or action.
+2. Include a FAIR-MAST shot ID and group when relevant. Do not include credentials or private data.
 
 **Environment**
-- OS: [e.g. macOS 26.4.1, Windows 11, Ubuntu 24.04.4]
-- Version: [e.g. 1.0.0]
+
+- Operating system:
+- Project version or commit:
+- Python and Node.js versions, if relevant:
 
 **Additional context**
-Add any other context or screenshots here.
+Add relevant logs or screenshots. Remove tokens, credentials, and private data first.
